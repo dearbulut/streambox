@@ -1,0 +1,39 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_clear"
+    android:layout_width="match_parent"
+    android:layoutDirection="ltr"
+    android:layout_height="@dimen/_43sdp"
+    android:layout_margin="@dimen/_3sdp"
+    android:background="@drawable/focused_catch_up"
+    android:focusable="true"
+    android:focusableInTouchMode="false">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/selectableItemBackground" />
+
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_43sdp"
+        android:layout_alignParentStart="true"
+        android:contentDescription="@string/todo"
+        android:padding="@dimen/_10sdp"
+        android:src="@drawable/ic_trash" />
+
+    <TextView
+        android:id="@+id/tv_clear"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toEndOf="@+id/iv_icon"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:lines="1"
+        android:gravity="center_vertical"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:text="@string/clear_cache"
+        android:textColor="?ns_title"
+        android:textSize="@dimen/_14ssp" />
+
+</RelativeLayout>

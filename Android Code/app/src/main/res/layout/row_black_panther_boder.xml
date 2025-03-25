@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- top -->
+    <View
+        android:background="#EDEDED"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_margin="@dimen/_8sdp"/>
+
+    <View
+        android:background="#EDEDED"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_width="@dimen/_10sdp"
+        android:layout_height="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_55sdp"
+        android:layout_marginEnd="@dimen/_8sdp"/>
+
+    <View
+        android:background="#EDEDED"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_width="@dimen/_10sdp"
+        android:layout_height="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_65sdp"
+        android:layout_marginEnd="@dimen/_8sdp"/>
+
+    <View
+        android:background="#EDEDED"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_width="@dimen/_10sdp"
+        android:layout_height="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_75sdp"
+        android:layout_marginEnd="@dimen/_8sdp"/>
+
+    <View
+        android:background="#EDEDED"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_width="@dimen/_5sdp"
+        android:layout_height="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_55sdp"/>
+
+    <View
+        android:background="#EDEDED"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_width="@dimen/_5sdp"
+        android:layout_height="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_65sdp"/>
+
+    <View
+        android:background="#EDEDED"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_width="@dimen/_15sdp"
+        android:layout_height="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_75sdp"/>
+
+    <!-- bot -->
+    <View
+        android:background="#EDEDED"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_width="@dimen/_25sdp"
+        android:layout_height="@dimen/_25sdp"
+        android:layout_margin="@dimen/_8sdp"/>
+
+</RelativeLayout>

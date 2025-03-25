@@ -1,0 +1,105 @@
+{
+  "project_info": {
+    "project_number": "1013519972123",
+    "project_id": "nemosofts-app",
+    "storage_bucket": "nemosofts-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1013519972123:android:0b7977e05960803b7b85be",
+        "android_client_info": {
+          "package_name": "nsofts.streambox"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1013519972123-7nitll98coe5922deiurccvcoasbi177.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA9KQfFcxr7VctTWMxLIGl0o1ucUmZM2Pw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1013519972123-7nitll98coe5922deiurccvcoasbi177.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1013519972123:android:f3b680166655ae4e7b85be",
+        "android_client_info": {
+          "package_name": "nemosofts.classified"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1013519972123-iv82e21f3phdsc80praq0lqkc7v5fo6c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "nemosofts.classified",
+            "certificate_hash": "29453598f7e92bdffa3cd27ca56034e694c189d0"
+          }
+        },
+        {
+          "client_id": "1013519972123-7nitll98coe5922deiurccvcoasbi177.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA9KQfFcxr7VctTWMxLIGl0o1ucUmZM2Pw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1013519972123-7nitll98coe5922deiurccvcoasbi177.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1013519972123:android:c9bab0261b938aed7b85be",
+        "android_client_info": {
+          "package_name": "nemosofts.streambox"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1013519972123-7nitll98coe5922deiurccvcoasbi177.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA9KQfFcxr7VctTWMxLIGl0o1ucUmZM2Pw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1013519972123-7nitll98coe5922deiurccvcoasbi177.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

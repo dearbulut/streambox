@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/_10sdp"
+    android:paddingStart="@dimen/_15sdp"
+    android:paddingEnd="@dimen/_15sdp"
+    android:background="@drawable/bg_dark"
+    android:id="@+id/theme_bg"
+    tools:context=".activity.SettingGeneralActivity">
+
+    <RelativeLayout
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:id="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.3">
+
+        <ImageView
+            android:id="@+id/iv_back_page"
+            android:layout_width="@dimen/_33sdp"
+            android:layout_height="@dimen/_33sdp"
+            android:padding="@dimen/_5sdp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_player_back"
+            app:tint="@color/white"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:contentDescription="@string/todo"
+            android:focusable="true"
+            android:focusableInTouchMode="false"
+            android:background="@drawable/focused_icon_selector"
+            android:layout_marginEnd="@dimen/_10sdp"/>
+
+        <ImageView
+            android:id="@+id/iv_app_logo"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/iv_back_page"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/ic_setting"
+            android:padding="@dimen/_4sdp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_toEndOf="@+id/iv_app_logo"
+            android:text="@string/general_setting"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_11ssp"
+            android:layout_centerVertical="true"/>
+
+        <LinearLayout
+            android:id="@+id/ll_btn_save"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="false"
+            android:background="@drawable/focused_save_btn"
+            android:orientation="horizontal"
+            tools:ignore="RelativeOverlap">
+
+            <ImageView
+                android:id="@+id/tv_save"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:padding="@dimen/_7sdp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_save"
+                app:tint="@color/white"
+                android:contentDescription="@string/todo"/>
+
+            <ProgressBar
+                android:id="@+id/pb_save"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:padding="@dimen/_6sdp"
+                android:indeterminate="true"
+                android:indeterminateTint="@color/white"
+                android:visibility="gone"/>
+
+            <TextView
+                android:text="@string/save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12ssp"
+                android:layout_marginEnd="@dimen/_10sdp"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:baselineAligned="false"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:background="@drawable/bg_card_sub"
+        android:backgroundTint="?ns_title">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            tools:ignore="UselessParent">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="0dp"
+                android:layout_weight="1.6"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/_20sdp"
+                    android:orientation="vertical">
+
+                    <CheckBox
+                        android:id="@+id/cbox_autoplay_episode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/focused_edt"
+                        android:padding="@dimen/_6sdp"
+                        android:text="@string/autoplay_next_episode"
+                        android:textColor="?ns_title"
+                        android:textSize="@dimen/_12ssp"
+                        tools:ignore="InefficientWeight" />
+
+                    <CheckBox
+                        android:id="@+id/cbox_cat_reverse"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/focused_edt"
+                        android:padding="@dimen/_6sdp"
+                        android:text="@string/categories_reverse_order"
+                        android:textColor="?ns_title"
+                        android:textSize="@dimen/_12ssp"
+                        tools:ignore="InefficientWeight"
+                        android:layout_marginTop="@dimen/_5sdp"/>
+
+                    <LinearLayout
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:id="@+id/ll_recently_movie"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:focusable="true"
+                        android:focusableInTouchMode="false"
+                        android:background="@drawable/focused_edt"
+                        android:gravity="center"
+                        android:padding="@dimen/_5sdp">
+
+                        <TextView
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_12ssp"
+                            android:text="@string/recently_added_limit_movie_series"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:id="@+id/tv_add_recently_movie"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_marginEnd="@dimen/_2sdp"
+                            android:textColor="?ns_title_sub"
+                            android:textSize="@dimen/_12ssp"
+                            android:text="10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            tools:ignore="HardcodedText" />
+
+                        <ImageView
+                            android:src="@drawable/ic_round_arrow_down"
+                            android:layout_width="@dimen/_25sdp"
+                            android:layout_height="@dimen/_20sdp"
+                            app:tint="@color/white"
+                            android:contentDescription="@string/todo" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:id="@+id/ll_recently_live"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:focusable="true"
+                        android:focusableInTouchMode="false"
+                        android:background="@drawable/focused_edt"
+                        android:gravity="center"
+                        android:padding="@dimen/_5sdp">
+
+                        <TextView
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_12ssp"
+                            android:text="@string/recently_added_limit_live_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:id="@+id/tv_add_recently_live"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_marginEnd="@dimen/_2sdp"
+                            android:textColor="?ns_title_sub"
+                            android:textSize="@dimen/_12ssp"
+                            android:text="10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            tools:ignore="HardcodedText" />
+
+                        <ImageView
+                            android:src="@drawable/ic_round_arrow_down"
+                            android:layout_width="@dimen/_25sdp"
+                            android:layout_height="@dimen/_20sdp"
+                            app:tint="@color/white"
+                            android:contentDescription="@string/todo" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_marginEnd="@dimen/_3sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_3sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:textColor="?ns_title_sub"
+                        android:textSize="@dimen/_12ssp"
+                        android:text="@string/set_playlist_agent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <LinearLayout
+                        android:layout_width="@dimen/_240sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_edit_text"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:contentDescription="@string/todo"
+                            android:padding="@dimen/_7sdp"
+                            android:src="@drawable/ic_profile"
+                            app:tint="@color/white" />
+
+                        <EditText
+                            android:id="@+id/et_agent"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/app_name"
+                            android:imeOptions="actionDone|flagNoFullscreen"
+                            android:importantForAutofill="no"
+                            android:inputType="text"
+                            android:maxLines="1"
+                            android:nextFocusDown="@+id/tv_add_video_btn"
+                            android:padding="@dimen/_5sdp"
+                            android:textAlignment="viewStart"
+                            android:textColor="?ns_title"
+                            android:textColorHint="?ns_title_sub"
+                            android:textSize="@dimen/_10ssp"
+                            android:layout_marginEnd="@dimen/_3sdp"
+                            android:background="@drawable/focused_edit_text"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+            <View
+                android:layout_marginTop="@dimen/_1sdp"
+                android:layout_marginBottom="@dimen/_1sdp"
+                android:background="#12FFFFFF"
+                android:backgroundTint="?ns_title"
+                android:layout_width="@dimen/_1sdp"
+                android:layout_height="match_parent"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="@dimen/_20sdp"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:id="@+id/cbox_splash_audio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/splash_screen_music"
+                    android:textSize="@dimen/_12ssp"
+                    android:textColor="?ns_title"
+                    tools:ignore="InefficientWeight"
+                    android:background="@drawable/focused_edt"
+                    android:padding="@dimen/_6sdp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

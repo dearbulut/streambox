@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:focusable="true"
+    android:focusableInTouchMode="false"
+    android:background="@drawable/focused_epg"
+    android:layout_marginEnd="@dimen/_2sdp"
+    android:layout_marginBottom="@dimen/_1sdp">
+
+    <TextView
+        android:id="@+id/iv_epg_test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:lines="1"
+        android:textStyle="bold"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:id="@+id/iv_epg_start_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:lines="1"
+        android:textColor="@color/white"
+        android:layout_below="@id/iv_epg_test"
+        android:layout_marginBottom="@dimen/_4sdp"
+        android:layout_marginTop="@dimen/_2sdp"/>
+
+</RelativeLayout>

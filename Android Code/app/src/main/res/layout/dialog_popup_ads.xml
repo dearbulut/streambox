@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/_25sdp">
+
+    <LinearLayout
+        android:layout_width="@dimen/_270sdp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/bg_dialog_ads"
+        android:padding="@dimen/_3sdp"
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_150sdp">
+
+            <androidx.nemosofts.material.ImageHelperView
+                android:id="@+id/iv_ads"
+                android:scaleType="fitCenter"
+                android:src="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:contentDescription="@string/todo"/>
+
+            <View
+                android:layout_margin="@dimen/_2sdp"
+                android:id="@+id/vw_ads"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:focusable="true"
+                android:focusableInTouchMode="false"
+                android:background="@drawable/focused_multiple_screen"/>
+
+            <TextView
+                android:background="@color/color_select"
+                android:textColor="@color/white"
+                android:text="AD"
+                android:paddingStart="@dimen/_2sdp"
+                android:paddingEnd="@dimen/_2sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:ignore="HardcodedText" />
+
+            <androidx.nemosofts.material.ProgressBarView
+                android:id="@+id/pb_ads"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_centerInParent="true"
+                android:indeterminate="true"
+                app:pb_color="#FFee44"
+                app:pb_colors="@array/progress_colors"
+                app:pb_max_sweep_angle="300"
+                app:pb_min_sweep_angle="10"
+                app:pb_rotation_speed="1.0"
+                app:pb_stroke_width="@dimen/_2sdp"
+                app:pb_sweep_speed="1.0" />
+
+            <ImageView
+                android:id="@+id/iv_back_ads"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_alignParentEnd="true"
+                android:contentDescription="@string/todo"
+                android:padding="@dimen/_2sdp"
+                android:src="@drawable/ic_close"
+                app:tint="#000000"
+                android:focusable="true"
+                android:focusableInTouchMode="false"
+                android:background="@drawable/focused_multiple_screen"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

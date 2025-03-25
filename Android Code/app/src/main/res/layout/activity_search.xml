@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/_15sdp"
+    android:background="@drawable/bg_dark"
+    android:id="@+id/theme_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_back_page"
+                android:layout_width="@dimen/_33sdp"
+                android:layout_height="@dimen/_33sdp"
+                android:padding="@dimen/_5sdp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_player_back"
+                app:tint="@color/white"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"
+                android:contentDescription="@string/todo"
+                android:focusable="true"
+                android:focusableInTouchMode="false"
+                android:background="@drawable/focused_icon_selector"
+                android:layout_marginEnd="@dimen/_5sdp"/>
+
+            <RelativeLayout
+                android:layout_width="@dimen/_200sdp"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/iv_back_page"
+                android:layout_height="@dimen/_32sdp"
+                android:layout_marginBottom="@dimen/_7sdp"
+                android:background="@drawable/bg_edit_text">
+
+                <EditText
+                    android:layout_centerVertical="true"
+                    android:id="@+id/edt_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_3sdp"
+                    android:layout_marginEnd="@dimen/_3sdp"
+                    android:layout_toStartOf="@+id/iv_search"
+                    android:background="@drawable/focused_edit_text"
+                    android:hint="@string/search"
+                    android:imeOptions="actionSearch|flagNoFullscreen"
+                    android:importantForAutofill="no"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:padding="@dimen/_5sdp"
+                    android:textAlignment="viewStart"
+                    android:textColor="?ns_white"
+                    android:textColorHint="?ns_title_sub"
+                    android:textSize="@dimen/_11ssp"
+                    tools:ignore="HardcodedText" />
+
+                <View
+                    android:layout_centerVertical="true"
+                    android:layout_width="@dimen/_1sdp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_1sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:layout_toStartOf="@+id/iv_search"
+                    android:background="#23FFFFFF" />
+
+                <ImageView
+                    android:id="@+id/iv_search"
+                    android:layout_width="@dimen/_28sdp"
+                    android:layout_height="@dimen/_24sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/_4sdp"
+                    android:background="@drawable/focused_edit_text"
+                    android:contentDescription="@string/todo"
+                    android:padding="@dimen/_4sdp"
+                    android:src="@drawable/ic_search"
+                    app:tint="?ns_white"
+                    android:focusable="true"
+                    android:focusableInTouchMode="false"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:paddingBottom="@dimen/_20sdp" />
+
+            <FrameLayout
+                android:id="@+id/fl_empty"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="?attr/actionBarSize"
+                android:visibility="gone" />
+
+            <androidx.nemosofts.material.ProgressBarView
+                android:id="@+id/pb"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_centerInParent="true"
+                android:indeterminate="true"
+                app:pb_color="#FFee44"
+                app:pb_colors="@array/progress_colors"
+                app:pb_max_sweep_angle="300"
+                app:pb_min_sweep_angle="10"
+                app:pb_rotation_speed="1.0"
+                app:pb_stroke_width="@dimen/_2sdp"
+                app:pb_sweep_speed="1.0"
+                android:visibility="gone"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

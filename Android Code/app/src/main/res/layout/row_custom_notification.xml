@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="75dp"
+    android:background="#292929"
+    android:padding="5dp">
+
+    <ImageView
+        android:id="@+id/nf_icon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="5dp"
+        android:contentDescription="@string/app_name"
+        android:src="@mipmap/ic_launcher" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_toEndOf="@+id/nf_icon"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/nf_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:text="@string/app_name"
+            android:layout_marginEnd="20dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="#EAEAEA" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp">
+
+            <ProgressBar
+                android:id="@+id/progress"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="5dp"
+                android:max="100"
+                android:progress="0"
+                android:progressDrawable="@drawable/color_progress_download"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:baselineAligned="false">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    tools:ignore="UselessLeaf" />
+
+                <RelativeLayout
+                    android:layout_width="3dp"
+                    android:layout_height="5dp"
+                    android:background="#292929" />
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    tools:ignore="UselessLeaf" />
+
+                <RelativeLayout
+                    android:layout_width="3dp"
+                    android:layout_height="5dp"
+                    android:background="#292929" />
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    tools:ignore="UselessLeaf" />
+
+                <RelativeLayout
+                    android:layout_width="3dp"
+                    android:layout_height="5dp"
+                    android:background="#292929" />
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    tools:ignore="UselessLeaf" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/nf_percentage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="#D3D3D3"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_stop_download"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:padding="3dp"
+        android:src="@android:drawable/ic_menu_close_clear_cancel"
+        android:layout_alignParentEnd="true"
+        app:tint="@color/white"
+        android:contentDescription="@string/todo" />
+
+</RelativeLayout>

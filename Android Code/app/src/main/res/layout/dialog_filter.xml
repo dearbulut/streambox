@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/_25sdp">
+
+    <LinearLayout
+        android:layout_width="@dimen/_280sdp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/bg_dialog"
+        android:orientation="vertical"
+        android:padding="@dimen/_5sdp"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/_1sdp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:contentDescription="@string/todo"
+                android:padding="@dimen/_5sdp"
+                android:src="@drawable/ic_filter_list"
+                app:tint="?ns_white"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="@dimen/_9sdp"
+                android:text="@string/filter"
+                android:textColor="?ns_title"
+                android:textSize="@dimen/_13ssp"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:id="@+id/iv_close_btn"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:contentDescription="@string/todo"
+                android:padding="@dimen/_5sdp"
+                android:src="@drawable/ic_close"
+                app:tint="?ns_white"
+                android:focusable="true"
+                android:focusableInTouchMode="false"
+                android:background="@drawable/focused_icon_selector"/>
+
+        </LinearLayout>
+
+        <RadioGroup
+            android:id="@+id/rg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            tools:ignore="UselessParent">
+
+            <RadioButton
+                android:id="@+id/rd_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:text="Date: Oldest first"
+                android:textSize="@dimen/_13ssp"
+                android:textAlignment="viewStart"
+                android:textColor="?ns_title"
+                android:buttonTint="?ns_title"
+                android:background="@drawable/focused_edt"
+                tools:ignore="HardcodedText"
+                android:padding="@dimen/_10sdp" />
+
+            <RadioButton
+                android:id="@+id/rd_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:text="Date: Newest"
+                android:textSize="@dimen/_13ssp"
+                android:textAlignment="viewStart"
+                android:textColor="?ns_title"
+                android:buttonTint="?ns_title"
+                android:background="@drawable/focused_edt"
+                tools:ignore="HardcodedText"
+                android:padding="@dimen/_10sdp" />
+
+        </RadioGroup>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/_10sdp">
+
+            <TextView
+                android:id="@+id/btn_cancel_filter"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/filter_remove"
+                android:textSize="@dimen/_13ssp"
+                android:textColor="@color/white"
+                android:focusable="true"
+                android:focusableInTouchMode="false"
+                android:background="@drawable/focused_btn_danger"/>
+
+            <TextView
+                android:id="@+id/btn_submit_filter"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/apply_filter"
+                android:textSize="@dimen/_13ssp"
+                android:textColor="@color/white"
+                android:focusable="true"
+                android:focusableInTouchMode="false"
+                android:background="@drawable/focused_btn_primary"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

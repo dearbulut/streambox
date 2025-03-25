@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingStart="@dimen/_15sdp"
+    android:paddingEnd="@dimen/_15sdp">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="false"
+        android:focusableInTouchMode="false">
+
+        <LinearLayout
+            android:paddingTop="@dimen/_10sdp"
+            android:paddingBottom="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.3">
+
+                <include layout="@layout/row_shimmer_effects"
+                    android:layout_width="@dimen/_33sdp"
+                    android:layout_height="@dimen/_33sdp"
+                    android:padding="@dimen/_5sdp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginEnd="@dimen/_10sdp"/>
+
+                <include layout="@layout/row_shimmer_effects"
+                    android:layout_width="@dimen/_70sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"/>
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_marginStart="@dimen/_10ssp"
+                android:layout_marginEnd="@dimen/_10ssp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.8"
+                    android:baselineAligned="false"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="5"
+                        tools:ignore="NestedWeights">
+
+                        <include layout="@layout/row_shimmer_effects"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_150sdp" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:contentDescription="@string/todo"
+                            android:src="@drawable/ic_star_border" />
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:contentDescription="@string/todo"
+                            android:src="@drawable/ic_star_border" />
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:contentDescription="@string/todo"
+                            android:src="@drawable/ic_star_border" />
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:contentDescription="@string/todo"
+                            android:src="@drawable/ic_star_border" />
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:contentDescription="@string/todo"
+                            android:src="@drawable/ic_star_border" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_weight="3"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_10sdp"
+                        android:baselineAligned="false">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_weight="0.9">
+
+                            <include layout="@layout/row_shimmer_effects"
+                                android:layout_width="@dimen/_55sdp"
+                                android:layout_marginTop="@dimen/_1sdp"
+                                android:layout_height="@dimen/_12sdp"
+                                android:layout_marginBottom="@dimen/_10ssp"/>
+
+                            <include layout="@layout/row_shimmer_effects"
+                                android:layout_width="@dimen/_61sdp"
+                                android:layout_marginTop="@dimen/_1sdp"
+                                android:layout_height="@dimen/_13sdp"
+                                android:layout_marginBottom="@dimen/_10ssp"/>
+
+                            <include layout="@layout/row_shimmer_effects"
+                                android:layout_width="@dimen/_41sdp"
+                                android:layout_marginTop="@dimen/_1sdp"
+                                android:layout_height="@dimen/_13sdp"
+                                android:layout_marginBottom="@dimen/_10ssp"/>
+
+                            <include layout="@layout/row_shimmer_effects"
+                                android:layout_width="@dimen/_31sdp"
+                                android:layout_marginTop="@dimen/_1sdp"
+                                android:layout_height="@dimen/_13sdp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_weight="2">
+
+                            <include layout="@layout/row_shimmer_effects"
+                                android:layout_width="@dimen/_35sdp"
+                                android:layout_marginTop="@dimen/_1sdp"
+                                android:layout_height="@dimen/_12sdp"
+                                android:layout_marginBottom="@dimen/_10ssp"/>
+
+                            <include layout="@layout/row_shimmer_effects"
+                                android:layout_width="@dimen/_50sdp"
+                                android:layout_marginTop="@dimen/_1sdp"
+                                android:layout_height="@dimen/_13sdp"
+                                android:layout_marginBottom="@dimen/_10ssp"/>
+
+                            <include layout="@layout/row_shimmer_effects"
+                                android:layout_width="@dimen/_35sdp"
+                                android:layout_marginTop="@dimen/_1sdp"
+                                android:layout_height="@dimen/_13sdp"
+                                android:layout_marginBottom="@dimen/_10ssp"/>
+
+                            <include layout="@layout/row_shimmer_effects"
+                                android:layout_width="@dimen/_55sdp"
+                                android:layout_marginTop="@dimen/_1sdp"
+                                android:layout_height="@dimen/_13sdp" />
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <include layout="@layout/row_shimmer_effects"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:paddingStart="@dimen/_5sdp"
+                        android:paddingEnd="@dimen/_6sdp"
+                        android:layout_width="@dimen/_84sdp"
+                        android:layout_height="@dimen/_26sdp" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginStart="@dimen/_10ssp"
+                android:layout_marginEnd="@dimen/_10ssp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:layout_marginBottom="@dimen/_5sdp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <include layout="@layout/row_shimmer_effects"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:paddingStart="@dimen/_5sdp"
+                        android:paddingEnd="@dimen/_6sdp"
+                        android:layout_width="@dimen/_90sdp"
+                        android:layout_height="@dimen/_26sdp" />
+                    <include layout="@layout/row_shimmer_effects"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:paddingStart="@dimen/_5sdp"
+                        android:paddingEnd="@dimen/_6sdp"
+                        android:layout_width="@dimen/_90sdp"
+                        android:layout_height="@dimen/_26sdp" />
+                    <include layout="@layout/row_shimmer_effects"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:paddingStart="@dimen/_5sdp"
+                        android:paddingEnd="@dimen/_6sdp"
+                        android:layout_width="@dimen/_90sdp"
+                        android:layout_height="@dimen/_26sdp" />
+                </LinearLayout>
+
+                <include layout="@layout/row_shimmer_effects"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:paddingStart="@dimen/_5sdp"
+                    android:paddingEnd="@dimen/_6sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_80sdp" />
+
+                <include layout="@layout/row_shimmer_effects"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:paddingStart="@dimen/_5sdp"
+                    android:paddingEnd="@dimen/_6sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_80sdp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

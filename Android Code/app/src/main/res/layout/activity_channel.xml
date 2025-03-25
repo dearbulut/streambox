@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/_10sdp"
+    android:paddingStart="@dimen/_15sdp"
+    android:paddingEnd="@dimen/_15sdp"
+    android:background="@drawable/bg_dark"
+    android:id="@+id/theme_bg">
+
+    <RelativeLayout
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:id="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.3">
+
+        <ImageView
+            android:id="@+id/iv_back_page"
+            android:layout_width="@dimen/_33sdp"
+            android:layout_height="@dimen/_33sdp"
+            android:padding="@dimen/_5sdp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_player_back"
+            app:tint="@color/white"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:contentDescription="@string/todo"
+            android:focusable="true"
+            android:focusableInTouchMode="false"
+            android:background="@drawable/focused_icon_selector"
+            android:layout_marginEnd="@dimen/_10sdp"/>
+
+        <ImageView
+            android:id="@+id/iv_app_logo"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/iv_back_page"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/list_channels"
+            android:padding="@dimen/_5sdp"
+            app:tint="?ns_title" />
+
+        <TextView
+            android:id="@+id/tv_page_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_toEndOf="@+id/iv_app_logo"
+            android:text="@string/live_tv_home"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_11ssp"
+            android:layout_centerVertical="true"
+            tools:ignore="RelativeOverlap" />
+
+
+        <LinearLayout
+            android:background="@drawable/bg_save_btn"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_search"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:background="@drawable/focused_img_selector_color"
+                android:contentDescription="@string/todo"
+                android:focusable="true"
+                android:focusableInTouchMode="false"
+                android:padding="@dimen/_5sdp"
+                android:src="@drawable/ic_search"
+                app:tint="@color/white" />
+
+            <View
+                android:layout_marginTop="@dimen/_1sdp"
+                android:layout_marginBottom="@dimen/_1sdp"
+                android:background="#23FFFFFF"
+                android:layout_width="@dimen/_1sdp"
+                android:layout_height="match_parent"/>
+
+            <ImageView
+                android:id="@+id/iv_filter"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:contentDescription="@string/todo"
+                android:padding="@dimen/_5sdp"
+                android:src="@drawable/ic_filter_list"
+                app:tint="@color/white"
+                android:focusable="true"
+                android:focusableInTouchMode="false"
+                android:background="@drawable/focused_img_selector_color"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            tools:ignore="NestedWeights">
+
+            <RelativeLayout
+                android:backgroundTint="#9EFFFFFF"
+                android:background="@drawable/edt_focused"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_2sdp">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edt_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:hint="@string/search_categories"
+                    android:imeOptions="actionSearch|flagNoFullscreen"
+                    android:importantForAutofill="no"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:paddingStart="@dimen/_3sdp"
+                    android:paddingEnd="@dimen/_3sdp"
+                    android:textColor="?ns_title"
+                    android:textColorHint="?ns_title_sub"
+                    android:textSize="@dimen/_11ssp"
+                    android:background="@drawable/focused_edt"
+                    android:drawableStart="@drawable/ic_search"
+                    android:drawablePadding="@dimen/_3sdp"
+                    android:layout_marginBottom="@dimen/_1sdp"
+                    android:privateImeOptions="horizontalAlignment=right"/>
+
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_cat"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:paddingBottom="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_2sdp"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:background="@drawable/bg_line"
+            android:layout_width="@dimen/_1sdp"
+            android:layout_height="match_parent"/>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2.8">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:paddingBottom="@dimen/_20sdp"
+                android:layoutAnimation="@anim/layout_animation_from_bottom" />
+
+            <FrameLayout
+                android:id="@+id/fl_empty"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="?attr/actionBarSize"
+                android:visibility="gone" />
+
+            <androidx.nemosofts.material.ProgressBarView
+                android:id="@+id/pb"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_centerInParent="true"
+                android:indeterminate="true"
+                android:visibility="gone"
+                app:pb_color="#FFee44"
+                app:pb_colors="@array/progress_colors"
+                app:pb_max_sweep_angle="300"
+                app:pb_min_sweep_angle="10"
+                app:pb_rotation_speed="1.0"
+                app:pb_stroke_width="@dimen/_2sdp"
+                app:pb_sweep_speed="1.0" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

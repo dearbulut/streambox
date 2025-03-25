@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/_10sdp"
+    android:paddingStart="@dimen/_15sdp"
+    android:paddingEnd="@dimen/_15sdp"
+    android:background="@drawable/bg_dark"
+    tools:context=".activity.PlaylistActivity"
+    android:id="@+id/theme_bg">
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.4">
+
+        <androidx.nemosofts.material.ImageHelperView
+            android:id="@+id/iv_app_logo"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/logo"
+            app:hv_corner_radius="@dimen/_3sdp"/>
+
+        <TextView
+            android:id="@+id/iv_app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_toEndOf="@+id/iv_app_logo"
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_16ssp"/>
+
+        <TextView
+            android:id="@+id/iv_app_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/ll_toolbar_not"
+            android:layout_toEndOf="@+id/iv_app_name"
+            android:textColor="@color/white"
+            android:textAlignment="center"
+            android:textSize="@dimen/_11ssp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_10sdp"/>
+
+        <LinearLayout
+            android:id="@+id/ll_toolbar_not"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:layout_alignParentEnd="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_wifi"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:padding="@dimen/_8sdp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_wifi"
+                app:tint="@color/white"
+                android:contentDescription="@string/todo"
+                android:focusable="false"
+                android:focusableInTouchMode="false"/>
+
+            <ImageView
+                android:id="@+id/iv_notifications"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:padding="@dimen/_8sdp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_round_notifications"
+                app:tint="@color/white"
+                android:contentDescription="@string/todo"
+                android:focusable="true"
+                android:focusableInTouchMode="false"
+                android:background="@drawable/focused_icon_selector"/>
+
+            <ImageView
+                android:id="@+id/iv_file_download"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:padding="@dimen/_8sdp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/iv_downloading"
+                app:tint="@color/white"
+                android:contentDescription="@string/todo"
+                android:focusable="true"
+                android:focusableInTouchMode="false"
+                android:background="@drawable/focused_icon_selector"/>
+
+            <ImageView
+                android:id="@+id/iv_profile_re"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:padding="@dimen/_6sdp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_people"
+                app:tint="@color/white"
+                android:contentDescription="@string/todo"
+                android:focusable="true"
+                android:focusableInTouchMode="false"
+                android:background="@drawable/focused_icon_selector"/>
+
+            <ImageView
+                android:id="@+id/iv_settings"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:padding="@dimen/_8sdp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_player_setting"
+                app:tint="@color/white"
+                android:contentDescription="@string/todo"
+                android:focusable="true"
+                android:focusableInTouchMode="false"
+                android:background="@drawable/focused_icon_selector"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/_3sdp"
+        android:id="@+id/ll_center"
+        android:orientation="horizontal"
+        android:baselineAligned="false"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:background="@drawable/bg_card_tv"
+            tools:ignore="NestedWeights">
+
+            <ImageView
+                app:tint="#41000000"
+                android:scaleType="centerCrop"
+                android:src="@drawable/pattern"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/todo" />
+
+            <androidx.nemosofts.material.ShimmerEffects
+                android:visibility="visible"
+                android:id="@+id/shimmer_view_live"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:shimmer_duration="3500"
+                app:shimmer_direction="left_to_right"
+                app:shimmer_base_alpha="0"
+                android:layout_centerInParent="true">
+
+                <ImageView
+                    app:tint="#B3000000"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/pattern"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/todo" />
+
+            </androidx.nemosofts.material.ShimmerEffects>
+
+            <RelativeLayout
+                android:id="@+id/select_live"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/todo"
+                android:focusable="true"
+                android:focusableInTouchMode="false"
+                android:background="@drawable/focused_home_selector">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="?attr/selectableItemBackground"  />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <ImageView
+                        android:layout_width="@dimen/_60sdp"
+                        android:layout_height="@dimen/_60sdp"
+                        android:src="@drawable/ic_tv"
+                        app:tint="@color/white"
+                        android:layout_marginBottom="@dimen/_4sdp"
+                        android:contentDescription="@string/todo"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/live_tv_home"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_19ssp"
+                        android:textStyle="bold"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.3">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:background="@drawable/bg_card_movies"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                tools:ignore="NestedWeights">
+
+                <ImageView
+                    app:tint="#41000000"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/pattern"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/todo" />
+
+                <androidx.nemosofts.material.ShimmerEffects
+                    android:id="@+id/shimmer_view_movie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:shimmer_duration="3500"
+                    app:shimmer_direction="left_to_right"
+                    app:shimmer_base_alpha="0"
+                    android:layout_centerInParent="true">
+
+                    <ImageView
+                        app:tint="#B3000000"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/pattern"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription="@string/todo" />
+
+                </androidx.nemosofts.material.ShimmerEffects>
+
+                <RelativeLayout
+                    android:id="@+id/select_movie"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/todo"
+                    android:focusable="true"
+                    android:focusableInTouchMode="false"
+                    android:background="@drawable/focused_home_selector">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="?attr/selectableItemBackground"  />
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        tools:ignore="UseCompoundDrawables">
+
+                        <ImageView
+                            android:layout_width="@dimen/_50sdp"
+                            android:layout_height="@dimen/_50sdp"
+                            android:src="@drawable/ic_movie"
+                            app:tint="@color/white"
+                            android:layout_marginBottom="@dimen/_4sdp"
+                            android:contentDescription="@string/todo"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="VOD"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_19ssp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.7"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:background="@drawable/bg_card_all"
+                android:focusable="false"
+                android:focusableInTouchMode="false">
+
+                <View
+                    android:id="@+id/vw_multiple_screen"
+                    android:background="@drawable/bg_card_all"
+                    android:backgroundTint="#B3000000"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"/>
+
+                <RelativeLayout
+                    android:id="@+id/select_multiple_screen"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/todo"
+                    android:focusable="true"
+                    android:focusableInTouchMode="false"
+                    android:background="@drawable/focused_home_selector">
+
+                    <ImageView
+                        app:tint="#41000000"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/pattern"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription="@string/todo" />
+
+                    <androidx.nemosofts.material.ShimmerEffects
+                        android:id="@+id/shimmer_view_serials"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:shimmer_duration="3500"
+                        app:shimmer_direction="left_to_right"
+                        app:shimmer_base_alpha="0"
+                        android:layout_centerInParent="true">
+
+                        <ImageView
+                            app:tint="#B3000000"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/pattern"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:contentDescription="@string/todo" />
+
+                    </androidx.nemosofts.material.ShimmerEffects>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        tools:ignore="UseCompoundDrawables">
+
+                        <ImageView
+                            android:layout_marginEnd="@dimen/_3sdp"
+                            android:layout_width="@dimen/_24sdp"
+                            android:layout_height="@dimen/_24sdp"
+                            android:src="@drawable/ic_multiple_screen"
+                            app:tint="@color/white"
+                            android:padding="@dimen/_1sdp"
+                            android:contentDescription="@string/todo"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/multiple_screen"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_13ssp"
+                            android:textStyle="bold"
+                            android:lines="1"/>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="?attr/selectableItemBackground" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.3">
+
+        <TextView
+            android:id="@+id/tv_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:text="@string/logged_in"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp"
+            tools:ignore="RelativeOverlap" />
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_dark"
+    android:id="@+id/theme_bg"
+    android:paddingStart="@dimen/_5sdp"
+    android:paddingEnd="@dimen/_5sdp">
+
+    <LinearLayout
+        android:baselineAligned="false"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/_10sdp">
+
+        <LinearLayout
+            android:id="@+id/ll_screen_one_two"
+            android:baselineAligned="false"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/black"
+                tools:ignore="NestedWeights">
+
+                <androidx.media3.ui.PlayerView
+                    android:layout_margin="@dimen/_2sdp"
+                    android:id="@+id/player_one"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:animateLayoutChanges="true"
+                    android:background="@color/black"
+                    app:controller_layout_id="@layout/custom_controls_none"
+                    app:use_controller="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"/>
+
+                <androidx.nemosofts.material.ProgressBarView
+                    android:id="@+id/pb_one"
+                    android:layout_width="@dimen/_35sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_centerInParent="true"
+                    android:indeterminate="true"
+                    app:pb_color="#FFee44"
+                    app:pb_colors="@array/progress_colors"
+                    app:pb_max_sweep_angle="300"
+                    app:pb_min_sweep_angle="10"
+                    app:pb_rotation_speed="1.0"
+                    app:pb_stroke_width="@dimen/_2sdp"
+                    app:pb_sweep_speed="1.0"
+                    android:visibility="gone"/>
+
+                <ImageView
+                    android:id="@+id/iv_add_btn_one"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/focused_img_selector"
+                    android:contentDescription="@string/todo"
+                    android:focusable="true"
+                    android:focusableInTouchMode="false"
+                    android:padding="@dimen/_5sdp"
+                    android:src="@drawable/ic_add_circle"
+                    app:tint="@color/white" />
+
+                <ImageView
+                    android:visibility="invisible"
+                    android:id="@+id/iv_volume_one"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:padding="@dimen/_7sdp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_volume_off"
+                    app:tint="@color/white"
+                    android:contentDescription="@string/todo"
+                    android:layout_alignParentEnd="true"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"/>
+
+                <View
+                    android:visibility="invisible"
+                    android:id="@+id/vw_player_one"
+                    android:background="@drawable/focused_multiple_screen"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:focusable="true"
+                    android:focusableInTouchMode="false"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_player_two"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/black">
+
+                <androidx.media3.ui.PlayerView
+                    android:layout_margin="@dimen/_2sdp"
+                    android:id="@+id/player_tow"
+                    android:background="@color/black"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:animateLayoutChanges="true"
+                    app:use_controller="false"
+                    app:controller_layout_id="@layout/custom_controls_none"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"/>
+
+                <androidx.nemosofts.material.ProgressBarView
+                    android:id="@+id/pb_tow"
+                    android:layout_width="@dimen/_35sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_centerInParent="true"
+                    android:indeterminate="true"
+                    app:pb_color="#FFee44"
+                    app:pb_colors="@array/progress_colors"
+                    app:pb_max_sweep_angle="300"
+                    app:pb_min_sweep_angle="10"
+                    app:pb_rotation_speed="1.0"
+                    app:pb_stroke_width="@dimen/_2sdp"
+                    app:pb_sweep_speed="1.0"
+                    android:visibility="gone"/>
+
+                <ImageView
+                    android:id="@+id/iv_add_btn_tow"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:contentDescription="@string/todo"
+                    android:padding="@dimen/_5sdp"
+                    android:src="@drawable/ic_add_circle"
+                    app:tint="@color/white"
+                    android:focusable="true"
+                    android:focusableInTouchMode="false"
+                    android:background="@drawable/focused_img_selector"
+                    android:layout_centerInParent="true"/>
+
+                <ImageView
+                    android:visibility="invisible"
+                    android:id="@+id/iv_volume_tow"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:padding="@dimen/_7sdp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_volume_off"
+                    app:tint="@color/white"
+                    android:contentDescription="@string/todo"
+                    android:layout_alignParentEnd="true"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"/>
+
+                <View
+                    android:visibility="invisible"
+                    android:id="@+id/vw_player_tow"
+                    android:background="@drawable/focused_multiple_screen"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:focusable="true"
+                    android:focusableInTouchMode="false"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_screen_three_four"
+            android:baselineAligned="false"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/_10sdp">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/black"
+                tools:ignore="NestedWeights">
+
+                <androidx.media3.ui.PlayerView
+                    android:layout_margin="@dimen/_2sdp"
+                    android:id="@+id/player_three"
+                    android:background="@color/black"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:animateLayoutChanges="true"
+                    app:use_controller="false"
+                    app:controller_layout_id="@layout/custom_controls_none"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"/>
+
+                <androidx.nemosofts.material.ProgressBarView
+                    android:id="@+id/pb_three"
+                    android:layout_width="@dimen/_35sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_centerInParent="true"
+                    android:indeterminate="true"
+                    android:visibility="gone"
+                    app:pb_color="#FFee44"
+                    app:pb_colors="@array/progress_colors"
+                    app:pb_max_sweep_angle="300"
+                    app:pb_min_sweep_angle="10"
+                    app:pb_rotation_speed="1.0"
+                    app:pb_stroke_width="@dimen/_2sdp"
+                    app:pb_sweep_speed="1.0" />
+
+                <ImageView
+                    android:id="@+id/iv_add_btn_three"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:contentDescription="@string/todo"
+                    android:padding="@dimen/_5sdp"
+                    android:src="@drawable/ic_add_circle"
+                    app:tint="@color/white"
+                    android:background="@drawable/focused_img_selector"
+                    android:layout_centerInParent="true"
+                    android:focusable="true"
+                    android:focusableInTouchMode="false"/>
+
+                <ImageView
+                    android:visibility="invisible"
+                    android:id="@+id/iv_volume_three"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:padding="@dimen/_7sdp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_volume_off"
+                    app:tint="@color/white"
+                    android:contentDescription="@string/todo"
+                    android:layout_alignParentEnd="true"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"/>
+
+                <View
+                    android:visibility="invisible"
+                    android:id="@+id/vw_player_three"
+                    android:background="@drawable/focused_multiple_screen"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:focusable="true"
+                    android:focusableInTouchMode="false"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_player_four"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/black">
+
+                <androidx.media3.ui.PlayerView
+                    android:layout_margin="@dimen/_2sdp"
+                    android:id="@+id/player_four"
+                    android:background="@color/black"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:animateLayoutChanges="true"
+                    app:use_controller="false"
+                    app:controller_layout_id="@layout/custom_controls_none"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"/>
+
+                <androidx.nemosofts.material.ProgressBarView
+                    android:id="@+id/pb_four"
+                    android:layout_width="@dimen/_35sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_centerInParent="true"
+                    android:indeterminate="true"
+                    app:pb_color="#FFee44"
+                    app:pb_colors="@array/progress_colors"
+                    app:pb_max_sweep_angle="300"
+                    app:pb_min_sweep_angle="10"
+                    app:pb_rotation_speed="1.0"
+                    app:pb_stroke_width="@dimen/_2sdp"
+                    app:pb_sweep_speed="1.0"
+                    android:visibility="gone"/>
+
+                <ImageView
+                    android:id="@+id/iv_add_btn_four"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:contentDescription="@string/todo"
+                    android:padding="@dimen/_5sdp"
+                    android:src="@drawable/ic_add_circle"
+                    app:tint="@color/white"
+                    android:background="@drawable/focused_img_selector"
+                    android:layout_centerInParent="true"
+                    android:focusable="true"
+                    android:focusableInTouchMode="false"/>
+
+                <ImageView
+                    android:visibility="invisible"
+                    android:id="@+id/iv_volume_four"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:padding="@dimen/_7sdp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_volume_off"
+                    app:tint="@color/white"
+                    android:contentDescription="@string/todo"
+                    android:layout_alignParentEnd="true"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"/>
+
+                <View
+                    android:visibility="invisible"
+                    android:id="@+id/vw_player_four"
+                    android:background="@drawable/focused_multiple_screen"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:focusable="true"
+                    android:focusableInTouchMode="false"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

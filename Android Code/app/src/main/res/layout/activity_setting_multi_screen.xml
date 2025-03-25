@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/_10sdp"
+    android:paddingStart="@dimen/_15sdp"
+    android:paddingEnd="@dimen/_15sdp"
+    android:background="@drawable/bg_dark"
+    android:id="@+id/theme_bg">
+
+    <RelativeLayout
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:id="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.3">
+
+        <ImageView
+            android:id="@+id/iv_back_page"
+            android:layout_width="@dimen/_33sdp"
+            android:layout_height="@dimen/_33sdp"
+            android:padding="@dimen/_5sdp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_player_back"
+            app:tint="@color/white"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:contentDescription="@string/todo"
+            android:focusable="true"
+            android:focusableInTouchMode="false"
+            android:background="@drawable/focused_icon_selector"
+            android:layout_marginEnd="@dimen/_10sdp"/>
+
+        <ImageView
+            android:id="@+id/iv_app_logo"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/iv_back_page"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/ic_setting"
+            android:padding="@dimen/_4sdp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_toEndOf="@+id/iv_app_logo"
+            android:text="@string/multi_screen_settings"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_11ssp"
+            android:layout_centerVertical="true"/>
+
+        <LinearLayout
+            android:id="@+id/ll_btn_save"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="false"
+            android:background="@drawable/focused_save_btn"
+            android:orientation="horizontal"
+            tools:ignore="RelativeOverlap">
+
+            <ImageView
+                android:id="@+id/tv_save"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:padding="@dimen/_7sdp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_save"
+                app:tint="@color/white"
+                android:contentDescription="@string/todo"/>
+
+            <ProgressBar
+                android:id="@+id/pb_save"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:padding="@dimen/_6sdp"
+                android:indeterminate="true"
+                android:indeterminateTint="@color/white"
+                android:visibility="gone"/>
+
+            <TextView
+                android:text="@string/save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12ssp"
+                android:layout_marginEnd="@dimen/_10sdp"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:baselineAligned="false"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:background="@drawable/bg_card_sub"
+        android:backgroundTint="?ns_title">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/_25sdp"
+            android:orientation="vertical">
+
+            <CheckBox
+                android:id="@+id/cbox_screen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/show_multi_screen_popup"
+                android:textSize="@dimen/_12ssp"
+                tools:ignore="InefficientWeight"
+                android:textColor="?ns_title"
+                android:background="@drawable/focused_edt"
+                android:padding="@dimen/_6sdp"/>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/choose_multi_screen_layout"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12ssp"
+                    android:paddingTop="@dimen/_2sdp"/>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <LinearLayout
+                        android:id="@+id/btn_select"
+                        android:gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:focusable="true"
+                        android:focusableInTouchMode="false"
+                        android:background="@drawable/focused_save_btn"
+                        android:orientation="horizontal"
+                        tools:ignore="RelativeOverlap">
+
+                        <ImageView
+                            android:id="@+id/tv_select"
+                            android:layout_width="@dimen/_35sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:padding="@dimen/_8sdp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ic_add_circle"
+                            app:tint="@color/white"
+                            android:contentDescription="@string/todo"/>
+
+                        <ProgressBar
+                            android:id="@+id/pb_select"
+                            android:layout_width="@dimen/_35sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:padding="@dimen/_6sdp"
+                            android:indeterminate="true"
+                            android:indeterminateTint="@color/white"
+                            android:visibility="gone"/>
+
+                        <TextView
+                            android:text="@string/select"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_12ssp"
+                            android:layout_marginEnd="@dimen/_10sdp"/>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/iv_screen"
+                        android:src="@drawable/screen_five"
+                        android:layout_width="@dimen/_60sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:contentDescription="@string/todo" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_80sdp"
+    android:layout_marginBottom="@dimen/_2sdp"
+    android:focusable="true"
+    android:focusableInTouchMode="false"
+    android:background="@drawable/focused_episodes"
+    android:id="@+id/rl_episodes">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/selectableItemBackground"/>
+
+    <androidx.nemosofts.material.ImageHelperView
+        android:id="@+id/iv_episodes"
+        android:layout_margin="@dimen/_6sdp"
+        android:layout_width="@dimen/_130sdp"
+        android:layout_height="match_parent"
+        android:src="@color/bg_color_load"
+        android:scaleType="center"
+        android:adjustViewBounds="true"
+        app:hv_border_width="@dimen/_2sdp"
+        app:hv_border_color="#33000000"
+        app:hv_corner_radius="@dimen/_3sdp"/>
+
+    <ImageView
+        android:padding="@dimen/_18sdp"
+        android:src="@drawable/ic_play"
+        android:layout_margin="@dimen/_6sdp"
+        android:layout_width="@dimen/_130sdp"
+        android:layout_height="match_parent"
+        app:tint="@color/white"
+        android:contentDescription="@string/todo"/>
+
+    <ProgressBar
+        android:id="@+id/pr_episodes"
+        android:layout_margin="@dimen/_5sdp"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_2sdp"
+        android:layout_alignStart="@+id/iv_episodes"
+        android:layout_alignEnd="@+id/iv_episodes"
+        android:layout_alignBottom="@+id/iv_episodes"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:progressDrawable="@drawable/color_progress"
+        android:progress="0"/>
+
+    <LinearLayout
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/iv_episodes"
+        android:orientation="vertical"
+        android:layout_centerVertical="true">
+
+        <TextView
+            android:id="@+id/tv_episodes"
+            android:textColor="@color/white"
+            android:text="@string/app_name"
+            android:textSize="@dimen/_10ssp"
+            android:textAlignment="viewStart"
+            android:lines="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatRatingBar
+            android:id="@+id/rb_episodes_list"
+            style="@style/RatingBar_white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:max="5"
+            android:numStars="5"
+            android:theme="@style/RatingBar_white"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:layout_marginBottom="@dimen/_2sdp"/>
+
+        <TextView
+            android:text="1h 3m"
+            android:id="@+id/tv_duration"
+            android:textSize="@dimen/_8ssp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/_1sdp"
+            android:paddingStart="@dimen/_4sdp"
+            android:paddingEnd="@dimen/_4sdp"
+            android:textColor="@color/white"
+            android:background="@drawable/bg_border_active"
+            android:backgroundTint="#40838383"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/tv_plot"
+            android:textColor="#BFFFFFFF"
+            android:text="@string/app_name"
+            android:textSize="@dimen/_8ssp"
+            android:textAlignment="viewStart"
+            android:lines="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_3sdp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

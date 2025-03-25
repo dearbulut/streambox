@@ -1,0 +1,59 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_cat"
+    android:layout_width="match_parent"
+    android:layoutDirection="ltr"
+    android:layout_height="@dimen/_40sdp"
+    android:layout_margin="@dimen/_3sdp"
+    android:background="@drawable/focused_catch_up"
+    android:focusable="true"
+    android:focusableInTouchMode="false">
+
+    <ImageView
+        android:layout_marginStart="@dimen/_5sdp"
+        android:id="@+id/iv_catch_up"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_alignParentStart="true"
+        android:contentDescription="@string/todo"
+        android:padding="@dimen/_7sdp"
+        android:src="@drawable/ic_tv" />
+
+    <ImageView
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:id="@+id/iv_catch_up_arrow"
+        android:layout_alignParentEnd="true"
+        android:padding="@dimen/_10sdp"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:src="@drawable/ic_arrow_right"
+        android:contentDescription="@string/todo"
+        app:tint="@color/white" />
+
+    <TextView
+        android:id="@+id/tv_cat_page"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@+id/iv_catch_up_arrow"
+        android:textColor="?ns_title"
+        android:layout_centerVertical="true"
+        tools:ignore="RelativeOverlap" />
+
+    <TextView
+        android:id="@+id/tv_cat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/_50sdp"
+        android:paddingEnd="@dimen/_50sdp"
+        android:background="?attr/selectableItemBackground"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:lines="1"
+        android:padding="@dimen/_10sdp"
+        android:text="@string/app_name"
+        android:textAlignment="viewStart"
+        android:textColor="?ns_title"
+        android:textSize="@dimen/_15ssp" />
+
+</RelativeLayout>

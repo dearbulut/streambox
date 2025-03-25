@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--Classic Color-->
+    <color name="ns_classic_primary">#E62E2F</color>
+    <color name="ns_classic_primary_sub">#26E62E2F</color>
+    <color name="ns_classic_bg">#000000</color>
+    <color name="ns_classic_bg_sub">#121212</color>
+    <color name="ns_classic_title">#DBDBDB</color>
+    <color name="ns_classic_title_sub">#E9A0A0A0</color>
+    <color name="ns_classic_border">#CC0E0E0E</color>
+    <color name="ns_classic_body_dark">#FFFFFF</color>
+
+    <!--Dark Color-->
+    <color name="ns_dark_primary">#FFCA28</color>
+    <color name="ns_dark_primary_sub">#26FFCA28</color>
+    <color name="ns_dark_bg">#000000</color>
+    <color name="ns_dark_bg_sub">#121212</color>
+    <color name="ns_dark_title">#DBDBDB</color>
+    <color name="ns_dark_title_sub">#E9A0A0A0</color>
+    <color name="ns_dark_border">#CC0E0E0E</color>
+
+    <!--Dark Blue Color-->
+    <color name="ns_blue_primary">#2196F3</color>
+    <color name="ns_blue_primary_sub">#262196F3</color>
+    <color name="ns_blue_bg">#0E1621</color>
+    <color name="ns_blue_bg_sub">#17212B</color>
+    <color name="ns_blue_title">#F5F5F5</color>
+    <color name="ns_blue_title_sub">#6C7883</color>
+    <color name="ns_blue_border">#F30C121C</color>
+
+    <!--Dark Grey Color-->
+    <color name="ns_grey_primary">#673AB7</color>
+    <color name="ns_grey_primary_sub">#26673AB7</color>
+    <color name="ns_grey_bg">#121212</color>
+    <color name="ns_grey_bg_sub">#1E1E1E</color>
+    <color name="ns_grey_title">#DBDBDB</color>
+    <color name="ns_grey_title_sub">#E9A0A0A0</color>
+    <color name="ns_grey_border">#191919</color>
+
+    <color name="md_background">#FDFDFE</color>
+    <color name="md_title">#161616</color>
+    <color name="md_title_sub">#6D6D6D</color>
+    <color name="md_border">#1A0C1318</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+    <color name="bg_subtitle_view">#4D000000</color>
+
+    <color name="color_select">#FF9F00</color>
+    <color name="bg_color_load">#212121</color>
+
+    <color name="color_setting_1">#E91E63</color>
+    <color name="color_setting_2">#9C27B0</color>
+    <color name="color_setting_3">#673AB7</color>
+    <color name="color_setting_4">#03A9F4</color>
+    <color name="color_setting_5">#4CAF50</color>
+    <color name="color_setting_6">#FF9F00</color>
+    <color name="color_setting_7">#FF5722</color>
+
+    <color name="color_state_pressed">#2DFFFFFF</color>
+
+</resources>

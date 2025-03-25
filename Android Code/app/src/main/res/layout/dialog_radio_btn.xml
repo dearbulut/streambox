@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="@dimen/_280sdp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/bg_dialog"
+        android:orientation="vertical"
+        android:padding="@dimen/_5sdp"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/_1sdp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:contentDescription="@string/todo"
+                android:padding="@dimen/_5sdp"
+                android:src="@drawable/ic_list_numbered"
+                app:tint="?ns_white"/>
+
+            <TextView
+                android:id="@+id/tv_page_title_dil"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="@dimen/_9sdp"
+                android:text="@string/app_name"
+                android:textColor="?ns_title"
+                android:textSize="@dimen/_13ssp"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:id="@+id/iv_close"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:contentDescription="@string/todo"
+                android:padding="@dimen/_5sdp"
+                android:src="@drawable/ic_close"
+                app:tint="?ns_white"
+                android:focusable="true"
+                android:focusableInTouchMode="false"
+                android:background="@drawable/focused_icon_selector"/>
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:id="@+id/rv_radio_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/_5sdp">
+
+            <TextView
+                android:id="@+id/tv_cancel"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/cancel"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_13ssp"
+                android:focusable="true"
+                android:focusableInTouchMode="false"
+                android:background="@drawable/focused_btn_danger"
+                android:layout_marginEnd="@dimen/_10sdp"/>
+
+            <TextView
+                android:id="@+id/tv_submit"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/submit"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_13ssp"
+                android:focusable="true"
+                android:focusableInTouchMode="false"
+                android:background="@drawable/focused_btn_primary"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

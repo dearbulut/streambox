@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="@dimen/_15sdp">
+
+    <ImageView
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_gravity="center"
+        android:contentDescription="@string/todo"
+        android:src="@drawable/ic_search_off"
+        app:tint="?ns_title"/>
+
+    <TextView
+        android:id="@+id/tv_empty_msg_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="@string/err_no_data_found"
+        android:textColor="?ns_title"
+        android:textSize="@dimen/_10ssp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/tv_empty_msg_sub"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:layout_width="@dimen/_150sdp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="@string/error_category_list"
+        android:textColor="#B0DBDBDB"
+        android:textSize="@dimen/_9ssp"/>
+
+</LinearLayout>

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_dark"
+    tools:context=".activity.SignInDeviceActivity"
+    android:baselineAligned="false"
+    android:id="@+id/theme_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:padding="@dimen/_15sdp"
+        android:baselineAligned="false">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:ignore="UselessParent"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tv_device_id"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:background="@drawable/bg_btn_ui"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="xxxxxxxxxxxxxxxx"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_10ssp"
+                    android:textStyle="bold"
+                    android:padding="@dimen/_6sdp"
+                    tools:ignore="HardcodedText" />
+
+                <androidx.nemosofts.material.ImageHelperView
+                    app:hv_corner_radius="@dimen/_5sdp"
+                    android:src="@drawable/logo"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="@dimen/_100sdp"/>
+
+                <LinearLayout
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_vpn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_gravity="center"
+                        android:focusable="true"
+                        android:focusableInTouchMode="false"
+                        android:background="@drawable/focused_btn_ui_selector"
+                        android:nextFocusRight="@id/et_any_name"
+                        android:layout_marginEnd="@dimen/_5sdp">
+
+                        <ImageView
+                            android:id="@id/iv_logo_3"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:padding="@dimen/_4sdp"
+                            android:src="@drawable/ic_vpn"
+                            android:contentDescription="@string/todo"
+                            app:tint="?ns_black" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_marginEnd="@dimen/_6sdp"
+                            android:layout_toEndOf="@+id/iv_logo_3"
+                            android:text="@string/connect_vpn"
+                            android:textColor="?ns_black"
+                            android:textSize="@dimen/_10ssp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_list_player"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_gravity="center"
+                        android:focusable="true"
+                        android:focusableInTouchMode="false"
+                        android:background="@drawable/focused_btn_ui_selector"
+                        android:nextFocusRight="@id/et_any_name">
+
+                        <ImageView
+                            android:id="@id/iv_logo_3"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:padding="@dimen/_4sdp"
+                            android:src="@drawable/ic_shield_user"
+                            android:contentDescription="@string/todo"
+                            app:tint="?ns_black" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_marginEnd="@dimen/_6sdp"
+                            android:layout_toEndOf="@+id/iv_logo_3"
+                            android:text="@string/list_users"
+                            android:textColor="?ns_black"
+                            android:textSize="@dimen/_10ssp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:background="@drawable/bg_card_sub"
+            android:backgroundTint="?ns_title"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:padding="@dimen/_15sdp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true" />
+
+            <FrameLayout
+                android:id="@+id/fl_empty"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="?attr/actionBarSize"
+                android:visibility="gone" />
+
+            <androidx.nemosofts.material.ProgressBarView
+                android:id="@+id/pb"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_centerInParent="true"
+                android:indeterminate="true"
+                app:pb_color="#FFee44"
+                app:pb_colors="@array/progress_colors"
+                app:pb_max_sweep_angle="300"
+                app:pb_min_sweep_angle="10"
+                app:pb_rotation_speed="1.0"
+                app:pb_stroke_width="@dimen/_2sdp"
+                app:pb_sweep_speed="1.0" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

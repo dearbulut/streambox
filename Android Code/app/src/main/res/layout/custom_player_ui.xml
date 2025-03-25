@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/root">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/container"
+        android:background="#46000000"
+        tools:ignore="UselessParent">
+
+        <ImageView
+            android:id="@+id/pausePlay"
+            android:layout_width="@dimen/_36sdp"
+            android:layout_height="@dimen/_36sdp"
+            android:layout_centerInParent="true"
+            android:alpha="0.8"
+            android:focusable="true"
+            android:focusableInTouchMode="false"
+            android:background="@drawable/focused_btn_play"
+            android:contentDescription="@string/app_name"
+            android:padding="@dimen/_4sdp"
+            android:src="@drawable/ic_play"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_15sdp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

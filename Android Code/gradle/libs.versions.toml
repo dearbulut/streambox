@@ -1,0 +1,109 @@
+[versions]
+commonsIo = "2.18.0"
+appcompat = "1.7.0"
+constraintlayout = "2.2.0"
+espressoCore = "3.6.1"
+firebaseAnalytics = "22.1.2"
+firebaseBom = "33.7.0"
+firebaseInappmessagingDisplay = "21.0.1"
+gson = "2.11.0"
+internetSpeedTesting = "1.0.1"
+junit = "4.13.2"
+junitVersion = "1.2.1"
+library = "9.0.4"
+material = "1.12.0"
+multidex = "2.0.1"
+okhttp = "4.12.0"
+palette = "1.0.0"
+picasso = "2.71828"
+recyclerview = "1.3.2"
+scytale = "1.0.1"
+activity = "1.9.3"
+onesignal = "5.1.26"
+media3Exoplayer = "1.6.0-alpha01"
+youtubePlayer = "12.1.1"
+androidSnowfall = "1.2.1"
+admobAds = "23.6.0"
+
+[libraries]
+appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appcompat" }
+material = { module = "com.google.android.material:material", version.ref = "material" }
+constraintlayout = { module = "androidx.constraintlayout:constraintlayout", version.ref = "constraintlayout" }
+junit = { module = "junit:junit", version.ref = "junit" }
+ext-junit = { module = "androidx.test.ext:junit", version.ref = "junitVersion" }
+espresso-core = { module = "androidx.test.espresso:espresso-core", version.ref = "espressoCore" }
+library = { module = "com.github.nemosofts:library", version.ref = "library" }
+androidx-multidex = { module = "androidx.multidex:multidex", version.ref = "multidex" }
+androidx-palette = { module = "androidx.palette:palette", version.ref = "palette" }
+
+recyclerview = { module = "androidx.recyclerview:recyclerview", version.ref = "recyclerview" }
+commons-io = { module = "commons-io:commons-io", version.ref = "commonsIo" }
+firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBom" }
+firebase-analytics = { module = "com.google.firebase:firebase-analytics", version.ref = "firebaseAnalytics" }
+firebase-inappmessaging-display = { module = "com.google.firebase:firebase-inappmessaging-display", version.ref = "firebaseInappmessagingDisplay" }
+scytale = { module = "com.yakivmospan:scytale", version.ref = "scytale" }
+androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
+
+gson = { module = "com.google.code.gson:gson", version.ref = "gson" }
+okhttp = { module = "com.squareup.okhttp3:okhttp", version.ref = "okhttp" }
+okhttp-interceptor = { module = "com.squareup.okhttp3:logging-interceptor", version.ref = "okhttp" }
+picasso = { module = "com.squareup.picasso:picasso", version.ref = "picasso" }
+internet-speed-testing = { module = "com.github.oatrice:internet-speed-testing", version.ref = "internetSpeedTesting" }
+
+media3-session = { module = "androidx.media3:media3-session", version.ref = "media3Exoplayer" }
+media3-datasource = { module = "androidx.media3:media3-datasource", version.ref = "media3Exoplayer" }
+media3-decoder = { module = "androidx.media3:media3-decoder", version.ref = "media3Exoplayer" }
+media3-common = { module = "androidx.media3:media3-common", version.ref = "media3Exoplayer" }
+media3-container = { module = "androidx.media3:media3-container", version.ref = "media3Exoplayer" }
+exoplayer-dash = { module = "androidx.media3:media3-exoplayer-dash", version.ref = "media3Exoplayer"}
+exoplayer-hls = { module = "androidx.media3:media3-exoplayer-hls", version.ref = "media3Exoplayer" }
+exoplayer-rtsp = { module = "androidx.media3:media3-exoplayer-rtsp", version.ref = "media3Exoplayer" }
+exoplayer-smoothstreaming = { module = "androidx.media3:media3-exoplayer-smoothstreaming", version.ref = "media3Exoplayer"}
+
+youtubeplayer-core = { module = "com.pierfrancescosoffritti.androidyoutubeplayer:core", version.ref = "youtubePlayer" }
+youtubeplayer-ui = { module = "com.pierfrancescosoffritti.androidyoutubeplayer:custom-ui", version.ref = "youtubePlayer" }
+
+snowfall = { module = "com.github.jetradarmobile:android-snowfall", version.ref = "androidSnowfall" }
+
+oneSignal = { module = "com.onesignal:OneSignal", version.ref = "onesignal" }
+
+admob = { module = "com.google.android.gms:play-services-ads", version.ref = "admobAds" }
+
+[bundles]
+nemosofts = [
+    "appcompat",
+    "material",
+    "constraintlayout",
+    "junit",
+    "ext-junit",
+    "espresso-core",
+    "library"
+]
+network-security = [
+    "gson",
+    "okhttp",
+    "okhttp-interceptor",
+    "picasso",
+    "internet-speed-testing"
+]
+firebase = [
+    "firebase-analytics",
+    "firebase-inappmessaging-display"
+]
+youtubeplayer = [
+    "youtubeplayer-core",
+    "youtubeplayer-ui"
+]
+media3 = [
+    "media3-session",
+    "media3-datasource",
+    "media3-decoder",
+    "media3-common",
+    "media3-container"
+]
+exoplayer = [
+    "exoplayer-dash",
+    "exoplayer-hls",
+    "exoplayer-rtsp",
+    "exoplayer-smoothstreaming"
+]

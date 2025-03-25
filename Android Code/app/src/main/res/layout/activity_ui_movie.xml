@@ -1,0 +1,672 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg_dark"
+    tools:context=".activity.UiMovieActivity"
+    android:id="@+id/theme_bg">
+
+    <ImageView
+        android:id="@+id/iv_bg_blur"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_dark"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/todo"/>
+
+    <ImageView
+        android:layout_alignParentEnd="true"
+        android:id="@+id/iv_bg_poster"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_dark"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/todo"/>
+
+    <View
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bg_player_control_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_150sdp"/>
+
+    <View
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bg_player_control_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_110sdp"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_45sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:background="@drawable/bar_top"
+        android:paddingStart="@dimen/_10sdp"
+        android:paddingEnd="@dimen/_10sdp">
+
+        <androidx.nemosofts.material.ImageHelperView
+            android:id="@+id/iv_app_logo"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/logo"
+            app:hv_corner_radius="@dimen/_3sdp"/>
+
+        <TextView
+            android:id="@+id/iv_app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_toEndOf="@+id/iv_app_logo"
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_16ssp"/>
+
+        <TextView
+            android:id="@+id/iv_app_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/ll_toolbar_not"
+            android:layout_toEndOf="@+id/iv_app_name"
+            android:textColor="@color/white"
+            android:textAlignment="center"
+            android:textSize="@dimen/_11ssp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_10sdp"/>
+
+        <LinearLayout
+            android:id="@+id/ll_toolbar_not"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:layout_alignParentEnd="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_wifi"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:padding="@dimen/_8sdp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_wifi"
+                app:tint="@color/white"
+                android:contentDescription="@string/todo"
+                android:focusable="false"
+                android:focusableInTouchMode="false"/>
+
+            <ImageView
+                android:id="@+id/iv_notifications"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:padding="@dimen/_8sdp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_round_notifications"
+                app:tint="@color/white"
+                android:contentDescription="@string/todo"
+                android:focusable="true"
+                android:focusableInTouchMode="false"
+                android:background="@drawable/focused_icon_selector"/>
+
+            <ImageView
+                android:id="@+id/iv_file_download"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:padding="@dimen/_8sdp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/iv_downloading"
+                app:tint="@color/white"
+                android:contentDescription="@string/todo"
+                android:focusable="true"
+                android:focusableInTouchMode="false"
+                android:background="@drawable/focused_icon_selector"/>
+
+            <ImageView
+                android:id="@+id/iv_radio"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:padding="@dimen/_8sdp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_radio"
+                app:tint="@color/white"
+                android:contentDescription="@string/todo"
+                android:focusable="true"
+                android:focusableInTouchMode="false"
+                android:background="@drawable/focused_icon_selector"/>
+
+            <ImageView
+                android:id="@+id/iv_profile"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:padding="@dimen/_7sdp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_outline_person"
+                app:tint="@color/white"
+                android:contentDescription="@string/todo"
+                android:focusable="true"
+                android:focusableInTouchMode="false"
+                android:background="@drawable/focused_icon_selector"/>
+
+            <ImageView
+                android:id="@+id/iv_profile_re"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:padding="@dimen/_6sdp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_people"
+                app:tint="@color/white"
+                android:contentDescription="@string/todo"
+                android:focusable="true"
+                android:focusableInTouchMode="false"
+                android:background="@drawable/focused_icon_selector"/>
+
+            <ImageView
+                android:id="@+id/iv_settings"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:padding="@dimen/_8sdp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_player_setting"
+                app:tint="@color/white"
+                android:contentDescription="@string/todo"
+                android:focusable="true"
+                android:focusableInTouchMode="false"
+                android:background="@drawable/focused_icon_selector"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <androidx.nemosofts.material.ProgressBarView
+        android:id="@+id/pb"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_centerInParent="true"
+        android:indeterminate="true"
+        android:visibility="visible"
+        app:pb_color="#FFee44"
+        app:pb_colors="@array/progress_colors"
+        app:pb_max_sweep_angle="300"
+        app:pb_min_sweep_angle="10"
+        app:pb_rotation_speed="1.0"
+        app:pb_stroke_width="@dimen/_2sdp"
+        app:pb_sweep_speed="1.0"/>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_75sdp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:scrollbars="none"
+        android:paddingTop="@dimen/_5sdp"
+        android:paddingBottom="@dimen/_5sdp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="@dimen/_110sdp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:background="@drawable/bg_card_all"
+                tools:ignore="NestedWeights">
+
+                <View
+                    android:id="@+id/vw_live_bg"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_card_all"
+                    android:backgroundTint="#4DB6AC"/>
+
+                <View
+                    android:id="@+id/vw_live_tv"
+                    android:background="@drawable/bg_card_tv"
+                    android:backgroundTint="#B3000000"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"/>
+
+                <ProgressBar
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                    android:id="@+id/pb_live_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:progressDrawable="@drawable/pb_gradient"
+                    android:max="100"
+                    android:progress="0"
+                    android:visibility="gone"/>
+
+                <RelativeLayout
+                    android:id="@+id/select_live"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/focused_home_selector"
+                    android:contentDescription="@string/todo"
+                    android:focusable="true"
+                    android:focusableInTouchMode="false">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_10sdp"
+                        tools:ignore="UseCompoundDrawables">
+
+                        <ImageView
+                            android:layout_width="@dimen/_25sdp"
+                            android:layout_height="@dimen/_25sdp"
+                            android:contentDescription="@string/todo"
+                            android:src="@drawable/ic_direct"
+                            app:tint="@color/white"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_4ssp"
+                            android:lines="1"
+                            android:text="@string/live_tv_home"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_11ssp"
+                            android:textStyle="bold"/>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="?attr/selectableItemBackground" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:background="@drawable/bg_card_all"
+                tools:ignore="NestedWeights">
+
+                <View
+                    android:id="@+id/vw_movies_bg"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_card_all"
+                    android:backgroundTint="#4DB6AC"/>
+
+                <View
+                    android:id="@+id/vw_movie"
+                    android:background="@drawable/bg_card_movies"
+                    android:backgroundTint="#B3000000"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"/>
+
+                <ProgressBar
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                    android:id="@+id/pb_movie"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:progressDrawable="@drawable/pb_movie"
+                    android:max="100"
+                    android:progress="0"
+                    android:visibility="gone"/>
+
+                <RelativeLayout
+                    android:id="@+id/select_movie"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/focused_home_selector"
+                    android:contentDescription="@string/todo"
+                    android:focusable="true"
+                    android:focusableInTouchMode="false">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_10sdp"
+                        tools:ignore="UseCompoundDrawables">
+
+                        <ImageView
+                            android:layout_width="@dimen/_25sdp"
+                            android:layout_height="@dimen/_25sdp"
+                            android:contentDescription="@string/todo"
+                            android:src="@drawable/ic_video_circle"
+                            app:tint="@color/white"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_4ssp"
+                            android:lines="1"
+                            android:text="@string/movies_home"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_11ssp"
+                            android:textStyle="bold"/>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="?attr/selectableItemBackground" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:background="@drawable/bg_card_all"
+                tools:ignore="NestedWeights">
+
+                <View
+                    android:id="@+id/vw_series_bg"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_card_all"
+                    android:backgroundTint="#4DB6AC"/>
+
+                <View
+                    android:id="@+id/vw_serials"
+                    android:background="@drawable/bg_card_series"
+                    android:backgroundTint="#B3000000"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"/>
+
+                <ProgressBar
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                    android:id="@+id/pb_serials"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:progressDrawable="@drawable/pb_serials"
+                    android:max="100"
+                    android:progress="0"
+                    android:visibility="gone"/>
+
+                <RelativeLayout
+                    android:id="@+id/select_serials"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/focused_home_selector"
+                    android:contentDescription="@string/todo"
+                    android:focusable="true"
+                    android:focusableInTouchMode="false">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_10sdp"
+                        tools:ignore="UseCompoundDrawables">
+
+                        <ImageView
+                            android:layout_width="@dimen/_25sdp"
+                            android:layout_height="@dimen/_25sdp"
+                            android:contentDescription="@string/todo"
+                            android:src="@drawable/ic_movie"
+                            app:tint="@color/white"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_4ssp"
+                            android:lines="1"
+                            android:text="@string/series_home"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_11ssp"
+                            android:textStyle="bold"/>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="?attr/selectableItemBackground" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:background="@drawable/bg_card_all"
+                tools:ignore="NestedWeights">
+
+                <View
+                    android:id="@+id/vw_epg_bg"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_card_all"
+                    android:backgroundTint="#4DB6AC"/>
+
+                <View
+                    android:id="@+id/vw_live_epg"
+                    android:background="@drawable/bg_card_all"
+                    android:backgroundTint="#B3000000"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"/>
+
+
+                <RelativeLayout
+                    android:id="@+id/select_epg"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/focused_home_selector"
+                    android:contentDescription="@string/todo"
+                    android:focusable="true"
+                    android:focusableInTouchMode="false">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_10sdp"
+                        tools:ignore="UseCompoundDrawables">
+
+                        <ImageView
+                            android:layout_width="@dimen/_25sdp"
+                            android:layout_height="@dimen/_25sdp"
+                            android:contentDescription="@string/todo"
+                            android:src="@drawable/ic_note"
+                            app:tint="@color/white"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_4ssp"
+                            android:lines="1"
+                            android:text="@string/live_with_epg_home"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_11ssp"
+                            android:textStyle="bold"/>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="?attr/selectableItemBackground" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:background="@drawable/bg_card_all"
+                tools:ignore="NestedWeights">
+
+                <View
+                    android:id="@+id/vw_multiple_bg"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_card_all"
+                    android:backgroundTint="#4DB6AC"/>
+
+                <View
+                    android:id="@+id/vw_multiple_screen"
+                    android:background="@drawable/bg_card_all"
+                    android:backgroundTint="#B3000000"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"/>
+
+                <RelativeLayout
+                    android:id="@+id/select_multiple_screen"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/focused_home_selector"
+                    android:contentDescription="@string/todo"
+                    android:focusable="true"
+                    android:focusableInTouchMode="false">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_10sdp"
+                        tools:ignore="UseCompoundDrawables">
+
+                        <ImageView
+                            android:layout_width="@dimen/_25sdp"
+                            android:layout_height="@dimen/_25sdp"
+                            android:contentDescription="@string/todo"
+                            android:src="@drawable/ic_multiple_screen"
+                            app:tint="@color/white"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_4ssp"
+                            android:lines="1"
+                            android:text="@string/multiple_screen"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_11ssp"
+                            android:textStyle="bold"/>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="?attr/selectableItemBackground" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_25sdp"
+                android:background="@drawable/bg_card_all"
+                tools:ignore="NestedWeights">
+
+                <View
+                    android:id="@+id/vw_catch_up_bg"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_card_all"
+                    android:backgroundTint="#4DB6AC"/>
+
+                <View
+                    android:id="@+id/vw_catch_up"
+                    android:background="@drawable/bg_card_all"
+                    android:backgroundTint="#B3000000"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"/>
+
+                <RelativeLayout
+                    android:id="@+id/select_catch_up"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/focused_home_selector"
+                    android:contentDescription="@string/todo"
+                    android:focusable="true"
+                    android:focusableInTouchMode="false">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_10sdp"
+                        tools:ignore="UseCompoundDrawables">
+
+                        <ImageView
+                            android:layout_width="@dimen/_25sdp"
+                            android:layout_height="@dimen/_25sdp"
+                            android:contentDescription="@string/todo"
+                            android:src="@drawable/ic_timer_start"
+                            app:tint="@color/white"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_4ssp"
+                            android:lines="1"
+                            android:text="@string/catch_up_home"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_11ssp"
+                            android:textStyle="bold"/>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="?attr/selectableItemBackground" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+</RelativeLayout>

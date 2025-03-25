@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:fadeScrollbars="true"
+        android:scrollbarSize="5dp"
+        android:scrollbarThumbVertical="@drawable/scrollbar"
+        android:scrollbars="vertical"
+        android:paddingEnd="@dimen/_30sdp"
+        android:paddingStart="@dimen/_10sdp"
+        android:paddingTop="@dimen/_10sdp"
+        android:paddingBottom="@dimen/_10sdp"
+        android:clipToPadding="true"
+        android:background="@drawable/gradient_player_list"/>
+
+    <View
+        android:id="@+id/iv_close_vw"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toEndOf="@+id/rv_dialog" />
+
+</RelativeLayout>

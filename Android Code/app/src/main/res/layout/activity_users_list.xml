@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/_10sdp"
+    android:paddingStart="@dimen/_15sdp"
+    android:paddingEnd="@dimen/_15sdp"
+    android:background="@drawable/bg_dark"
+    tools:context=".activity.UsersListActivity"
+    android:id="@+id/theme_bg">
+
+    <RelativeLayout
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:id="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.4">
+
+        <ImageView
+            android:id="@+id/iv_app_logo"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/ic_user_octagon"
+            android:padding="@dimen/_3sdp"
+            app:tint="?ns_title" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_toEndOf="@+id/iv_app_logo"
+            android:text="@string/list_users"
+            android:textColor="?ns_title"
+            android:textSize="@dimen/_11ssp"
+            android:layout_centerVertical="true"
+            tools:ignore="RelativeOverlap" />
+
+        <RelativeLayout
+            android:layout_centerVertical="true"
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/ll_user_add"
+            android:background="@drawable/edt_focused"
+            android:backgroundTint="#9EFFFFFF"
+            android:layout_marginEnd="@dimen/_10sdp">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edt_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="@dimen/_1sdp"
+                android:background="@drawable/focused_edt"
+                android:drawableEnd="@drawable/ic_search"
+                android:drawablePadding="@dimen/_3sdp"
+                android:hint="@string/search_user"
+                android:imeOptions="actionSearch|flagNoFullscreen"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:maxLines="1"
+                android:padding="@dimen/_5sdp"
+                android:privateImeOptions="horizontalAlignment=right"
+                android:textColor="?ns_title"
+                android:textColorHint="?ns_title_sub"
+                android:textSize="@dimen/_11ssp"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_user_add"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="false"
+            android:background="@drawable/focused_save_btn"
+            android:orientation="horizontal"
+            tools:ignore="RelativeOverlap">
+
+            <ImageView
+                android:id="@+id/tv_save"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:padding="@dimen/_7sdp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_user_add"
+                app:tint="@color/white"
+                android:contentDescription="@string/todo"/>
+
+            <TextView
+                android:text="@string/add_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12ssp"
+                android:layout_marginEnd="@dimen/_10sdp"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:id="@+id/rl_center"
+        android:baselineAligned="false"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:paddingBottom="@dimen/_20sdp"/>
+
+        <FrameLayout
+            android:id="@+id/fl_empty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="?attr/actionBarSize"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

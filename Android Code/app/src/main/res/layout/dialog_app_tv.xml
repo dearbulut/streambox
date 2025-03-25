@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/_25sdp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_90sdp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bg_dialog_tv"
+        android:orientation="horizontal"
+        android:padding="@dimen/_10sdp"
+        tools:ignore="UselessParent">
+
+        <ImageView
+            android:id="@+id/iv_dialog_icon"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/todo"
+            android:padding="@dimen/_12sdp"
+            android:src="@drawable/ic_exit_to_app"
+            app:tint="?ns_white"
+            android:layout_weight="0.4"/>
+
+        <TextView
+            android:id="@+id/tv_dialog_desc"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/_10sdp"
+            android:gravity="center"
+            android:text="@string/sure_exit"
+            android:textColor="?ns_title"
+            android:textSize="@dimen/_13ssp"
+            android:layout_weight="2"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1.4">
+
+            <TextView
+                android:id="@+id/tv_do_yes"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="@string/exit"
+                android:textColor="?ns_title"
+                android:textSize="@dimen/_13ssp"
+                android:focusable="true"
+                android:textStyle="bold"
+                android:focusableInTouchMode="false"
+                android:background="@drawable/focused_btn_dialog"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingEnd="@dimen/_5sdp"
+                tools:ignore="NestedWeights" />
+
+            <TextView
+                android:id="@+id/tv_do_cancel"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="@string/cancel"
+                android:textStyle="bold"
+                android:textColor="?ns_title"
+                android:textSize="@dimen/_13ssp"
+                android:focusable="true"
+                android:focusableInTouchMode="false"
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingEnd="@dimen/_5sdp"
+                android:background="@drawable/focused_btn_dialog"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

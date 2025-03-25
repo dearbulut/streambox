@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_36sdp"
+    android:layout_margin="@dimen/_5sdp"
+    android:focusable="true"
+    android:orientation="horizontal"
+    android:focusableInTouchMode="false"
+    android:background="@drawable/focused_bg_card_selector"
+    android:id="@+id/rl_login_list">
+
+    <ImageView
+        android:id="@+id/iv_list_logo"
+        android:layout_width="@dimen/_36sdp"
+        android:layout_height="@dimen/_36sdp"
+        android:padding="@dimen/_6sdp"
+        android:src="@drawable/ic_folder_connection"
+        android:contentDescription="@string/todo"
+        app:tint="@color/black" />
+
+    <TextView
+        android:id="@+id/iv_list_title"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="@string/login_with_xtream_codes"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_9ssp"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:layout_marginEnd="@dimen/_10sdp"/>
+
+    <ImageView
+        android:id="@+id/iv_more"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_36sdp"
+        android:contentDescription="@string/todo"
+        android:padding="@dimen/_8sdp"
+        android:src="@drawable/ic_arrow_right"
+        app:tint="@color/black"/>
+
+</LinearLayout>

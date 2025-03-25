@@ -1,0 +1,28 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_2sdp"
+    android:focusable="true"
+    android:focusableInTouchMode="false"
+    android:background="@drawable/bg_card_radio">
+
+    <androidx.nemosofts.material.ImageHelperView
+        android:id="@+id/iv_radio_list"
+        app:hv_corner_radius="@dimen/_4sdp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_100sdp"
+        android:layout_alignParentTop="true"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
+        android:src="@color/bg_color_load"/>
+
+    <View
+        android:id="@+id/fd_radio_card"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_100sdp"
+        android:focusable="true"
+        android:focusableInTouchMode="false"
+        android:background="@drawable/focused_movie"/>
+
+</RelativeLayout>

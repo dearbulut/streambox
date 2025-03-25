@@ -1,0 +1,63 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/rl_cat">
+
+    <TextView
+        android:id="@+id/tv_cat_mob"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minLines="1"
+        android:maxLines="50"
+        android:paddingStart="@dimen/_15sdp"
+        android:paddingEnd="@dimen/_15sdp"
+        android:paddingTop="@dimen/_7sdp"
+        android:paddingBottom="@dimen/_7sdp"
+        android:text="@string/app_name"
+        android:textAlignment="textStart"
+        android:textSize="@dimen/_12ssp"
+        android:focusable="true"
+        android:focusableInTouchMode="false"
+        android:textColor="@color/white"
+        android:background="@drawable/focused_text"/>
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/tv_cat_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:scrollHorizontally="true"
+        android:paddingStart="@dimen/_10sdp"
+        android:paddingEnd="@dimen/_10sdp"
+        android:paddingTop="@dimen/_7sdp"
+        android:paddingBottom="@dimen/_7sdp"
+        android:text="@string/app_name"
+        android:textAlignment="textStart"
+        android:textSize="@dimen/_11ssp"
+        android:focusable="true"
+        android:focusableInTouchMode="false"
+        android:textColor="@color/white"
+        android:background="@drawable/focused_text"/>
+
+    <View
+        android:id="@+id/vw_cat_mob"
+        android:layout_width="@dimen/_2sdp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tv_cat_mob"
+        android:layout_alignParentTop="true"
+        android:background="@color/color_select"
+        android:visibility="gone"/>
+
+    <View
+        android:id="@+id/vw_cat_tv"
+        android:layout_width="@dimen/_2sdp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tv_cat_tv"
+        android:layout_alignParentTop="true"
+        android:background="@color/color_select"
+        android:visibility="gone"/>
+
+</RelativeLayout>

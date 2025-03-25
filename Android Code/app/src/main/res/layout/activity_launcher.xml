@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.LauncherActivity"
+    android:background="@drawable/bg_dark"
+    android:id="@+id/theme_bg">
+
+
+    <LinearLayout
+        android:id="@+id/ll_title"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_30ssp"
+            android:textStyle="bold"
+            android:layout_marginBottom="@dimen/_2sdp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0.7"
+            android:orientation="horizontal"
+            android:gravity="center"
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                android:src="@drawable/ic_keyhole"
+                android:layout_width="@dimen/_14sdp"
+                android:layout_height="@dimen/_14sdp"
+                app:tint="?ns_white"
+                android:contentDescription="@string/todo" />
+
+            <TextView
+                android:textSize="@dimen/_11ssp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/encrypted_data_security"
+                android:textColor="?ns_white"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_below="@id/ll_title"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <ProgressBar
+            android:id="@+id/pb_splash"
+            android:layout_width="@dimen/_33sdp"
+            android:layout_height="@dimen/_33sdp"
+            android:layout_centerInParent="true"
+            android:indeterminate="true"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

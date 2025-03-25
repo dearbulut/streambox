@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rl_player_live_top"
+        android:paddingTop="@dimen/_5sdp"
+        android:paddingStart="@dimen/_10sdp"
+        android:paddingEnd="@dimen/_10sdp"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:background="@drawable/bg_player_control_top">
+
+        <ImageView
+            android:id="@+id/iv_back_player"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_6sdp"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:layout_marginEnd="@dimen/_6sdp"
+            android:layout_marginBottom="@dimen/_6sdp"
+            android:contentDescription="@string/todo"
+            android:padding="@dimen/_5sdp"
+            android:src="@drawable/ic_player_back"
+            app:tint="@color/white"
+            android:focusable="true"
+            android:focusableInTouchMode="false"
+            android:background="@drawable/focused_btn_play"/>
+
+        <TextView
+            android:id="@+id/tv_player_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/iv_battery_info"
+            android:layout_toEndOf="@+id/iv_back_player"
+            android:padding="@dimen/_10sdp"
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_13ssp"
+            android:textStyle="bold"/>
+
+        <ImageView
+            android:id="@+id/iv_battery_info"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginStart="@dimen/_6sdp"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/_4sdp"
+            android:src="@drawable/ic_battery_charging"
+            android:layout_toStartOf="@+id/iv_player_fav"
+            android:contentDescription="@string/todo"/>
+
+        <ImageView
+            android:id="@+id/iv_player_fav"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginStart="@dimen/_6sdp"
+            android:layout_toStartOf="@+id/iv_media_info"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/todo"
+            android:padding="@dimen/_5sdp"
+            android:src="@drawable/ic_favorite_border"
+            app:tint="@color/white"
+            android:focusable="true"
+            android:focusableInTouchMode="false"
+            android:background="@drawable/focused_btn_player"/>
+
+        <ImageView
+            android:id="@+id/iv_media_info"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginStart="@dimen/_6sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/todo"
+            android:padding="@dimen/_5sdp"
+            android:src="@drawable/ic_information"
+            app:tint="@color/white"
+            android:focusable="true"
+            android:focusableInTouchMode="false"
+            android:background="@drawable/focused_btn_player"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:padding="@dimen/_10sdp">
+
+        <ImageView
+            android:id="@+id/iv_previous"
+            android:layout_width="@dimen/_36sdp"
+            android:layout_height="@dimen/_36sdp"
+            android:contentDescription="@string/app_name"
+            android:padding="@dimen/_4sdp"
+            android:src="@drawable/ic_skip_previous"
+            app:tint="@color/white"
+            android:focusable="true"
+            android:focusableInTouchMode="false"
+            android:background="@drawable/focused_next_selector"/>
+
+        <ImageView
+            android:id="@+id/iv_play"
+            android:layout_width="@dimen/_36sdp"
+            android:layout_height="@dimen/_36sdp"
+            android:alpha="0.8"
+            android:focusable="true"
+            android:focusableInTouchMode="false"
+            android:background="@drawable/focused_btn_play"
+            android:contentDescription="@string/app_name"
+            android:padding="@dimen/_4sdp"
+            android:src="@drawable/ic_play"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_15sdp"/>
+
+        <ImageView
+            android:id="@+id/iv_next"
+            android:layout_width="@dimen/_36sdp"
+            android:layout_height="@dimen/_36sdp"
+            android:contentDescription="@string/app_name"
+            android:padding="@dimen/_4sdp"
+            android:src="@drawable/ic_skip_next"
+            app:tint="@color/white"
+            android:focusable="true"
+            android:focusableInTouchMode="false"
+            android:background="@drawable/focused_next_selector"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/rl_player_epg"
+        android:layout_width="@dimen/_280sdp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ll_player_live_bot"
+        android:background="@drawable/bg_player_control_epg"
+        android:layout_marginBottom="@dimen/_5sdp">
+
+        <TextView
+            android:id="@+id/tv_epg_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_4sdp"
+            android:lines="1"
+            android:text="@string/app_name"
+            android:textStyle="bold"
+            android:textSize="@dimen/_13ssp"
+            android:textColor="@color/white"/>
+
+        <View
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_2sdp"
+            android:layout_below="@id/tv_epg_title"
+            android:background="?ns_primary"
+            android:layout_marginStart="@dimen/_15sdp"/>
+
+        <TextView
+            android:id="@+id/tv_epg_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:lines="1"
+            android:textSize="@dimen/_12ssp"
+            android:textColor="@color/white"
+            android:text="@string/app_name"
+            android:layout_below="@id/tv_epg_title"
+            android:layout_marginBottom="@dimen/_4sdp"
+            android:layout_marginTop="@dimen/_4sdp"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_player_live_bot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bg_player_control_bottom"
+        android:paddingTop="@dimen/_7sdp"
+        android:paddingBottom="@dimen/_7sdp"
+        android:orientation="horizontal"
+        android:baselineAligned="false">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:id="@+id/ll_channels_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:focusable="true"
+                android:focusableInTouchMode="false"
+                android:background="@drawable/focused_btn_player"
+                android:gravity="center"
+                android:padding="@dimen/_6sdp"
+                tools:ignore="UselessParent">
+
+                <ImageView
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:contentDescription="@string/todo"
+                    android:src="@drawable/list_channels"
+                    app:tint="@color/white"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:text="Channels List"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12ssp"
+                    tools:ignore="HardcodedText"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:id="@+id/ll_aspect_ratio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/focused_btn_player"
+                android:focusable="true"
+                android:focusableInTouchMode="false"
+                android:gravity="center"
+                android:padding="@dimen/_6sdp"
+                tools:ignore="UselessParent">
+
+                <ImageView
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:contentDescription="@string/todo"
+                    android:src="@drawable/ic_aspect_ratio"
+                    app:tint="@color/white"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:text="Aspect Ratio"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12ssp"
+                    tools:ignore="HardcodedText"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:id="@+id/ll_multiple_screen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:focusable="true"
+                android:focusableInTouchMode="false"
+                android:background="@drawable/focused_btn_player"
+                android:gravity="center"
+                android:padding="@dimen/_6sdp"
+                tools:ignore="UselessParent">
+
+                <ImageView
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:contentDescription="@string/todo"
+                    android:src="@drawable/ic_grid_view"
+                    app:tint="@color/white"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:text="Multi-Screen"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12ssp"
+                    tools:ignore="HardcodedText"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/_25sdp"
+    android:gravity="center">
+
+    <LinearLayout
+        android:background="#CB1B1B1B"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/_15sdp"
+        tools:ignore="UselessParent">
+
+        <TextView
+            android:textSize="@dimen/_12ssp"
+            android:text="@string/choose_multi_screen_layout"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_5sdp"/>
+
+        <LinearLayout
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/iv_screen_one"
+                android:padding="@dimen/_5sdp"
+                android:src="@drawable/screen_one"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="@dimen/_80sdp"
+                android:contentDescription="@string/todo"
+                android:focusable="true"
+                android:focusableInTouchMode="false"
+                android:background="@drawable/focused_multiple_screen"/>
+
+            <ImageView
+                android:id="@+id/iv_screen_two"
+                android:padding="@dimen/_5sdp"
+                android:src="@drawable/screen_two"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="@dimen/_80sdp"
+                android:contentDescription="@string/todo"
+                android:focusable="true"
+                android:focusableInTouchMode="false"
+                android:background="@drawable/focused_multiple_screen"/>
+
+            <ImageView
+                android:id="@+id/iv_screen_three"
+                android:padding="@dimen/_5sdp"
+                android:src="@drawable/screen_three"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="@dimen/_80sdp"
+                android:contentDescription="@string/todo"
+                android:focusable="true"
+                android:focusableInTouchMode="false"
+                android:background="@drawable/focused_multiple_screen"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/iv_screen_four"
+                android:padding="@dimen/_5sdp"
+                android:src="@drawable/screen_four"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="@dimen/_80sdp"
+                android:contentDescription="@string/todo"
+                android:focusable="true"
+                android:focusableInTouchMode="false"
+                android:background="@drawable/focused_multiple_screen"/>
+
+            <ImageView
+                android:id="@+id/iv_screen_five"
+                android:padding="@dimen/_5sdp"
+                android:src="@drawable/screen_five"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="@dimen/_80sdp"
+                android:contentDescription="@string/todo"
+                android:focusable="true"
+                android:focusableInTouchMode="false"
+                android:background="@drawable/focused_multiple_screen"/>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="@dimen/_80sdp"
+                android:contentDescription="@string/todo"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

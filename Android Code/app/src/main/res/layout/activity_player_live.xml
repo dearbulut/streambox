@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?ns_black"
+    android:gravity="center"
+    android:keepScreenOn="true">
+
+    <nemosofts.streambox.util.player.CustomPlayerView
+        android:id="@+id/nSoftsPlayerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:controller_layout_id="@layout/custom_controls_live"
+        android:animateLayoutChanges="true"
+        app:surface_type="texture_view"/>
+
+    <androidx.nemosofts.material.ProgressBarView
+        android:id="@+id/pb_player"
+        android:layout_width="@dimen/_38sdp"
+        android:layout_height="@dimen/_38sdp"
+        android:layout_centerInParent="true"
+        android:indeterminate="true"
+        app:pb_color="#FFee44"
+        app:pb_colors="@array/progress_colors"
+        app:pb_max_sweep_angle="300"
+        app:pb_min_sweep_angle="10"
+        app:pb_rotation_speed="1.0"
+        app:pb_stroke_width="@dimen/_2sdp"
+        app:pb_sweep_speed="1.0" />
+
+    <ImageView
+        android:id="@+id/iv_reset"
+        android:layout_width="@dimen/_36sdp"
+        android:layout_height="@dimen/_36sdp"
+        android:alpha="0.8"
+        android:focusable="true"
+        android:focusableInTouchMode="false"
+        android:background="@drawable/focused_btn_play"
+        android:contentDescription="@string/app_name"
+        android:paddingTop="@dimen/_4sdp"
+        android:paddingBottom="@dimen/_5sdp"
+        android:src="@drawable/ic_reset"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        app:tint="@color/white"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+
+</RelativeLayout>
