@@ -16,12 +16,6 @@ define("PACKAGE_NAME",$settings_details['envato_package_name']);
 // For Api header
 $API_NAME = 'NEMOSOFTS_APP';
 
-// Purchase code verification
-if($settings_details['envato_buyer_name']=='' OR $settings_details['envato_purchase_code']=='' OR $settings_details['envato_api_key']=='') {
-    $set[$API_NAME][]=array('MSG'=> 'Purchase code verification failed!','success'=>'0');
-	header( 'Content-Type: application/json; charset=utf-8' );
-	echo $val= str_replace('\\/', '/', json_encode($set,JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));
-	die();
 }
 
 $get_helper = get_api_data($_POST['data']);
